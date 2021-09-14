@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title> Imersão Dev Alura-Aula 01</title>
+    <style>
+      
+      body {
+     font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+     min-height: 400px;
+     background-image: url('https://static.mundoeducacao.uol.com.br/mundoeducacao/conteudo_legenda/8fe054e8e61a21fc4a8db8f27303ea4d.jpg');
+     background-color: #f06d06;
+     background-size: 80vh;
+     background-position: center;
+     background-repeat:no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color:#ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color:#ffffff;
+  margin-top: 5px;
+  
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">
+      Calculadora de conversão km / m</h1>
+      <p class="page-subtitle">
+        <strong>Descubra qual a sua velocidade convertida!</strong>
+      </p>      
+    </div>
+   <br>
+   
+    <div class="converse1">
+      <p><strong>velocidade km/h:</strong></p>
+        <input type="number" id="velocidade1">
+
+      <input type="button" onclick= resultado1() value="converter" class="enviar1">
+    </div>
+    <div class="converse2">
+      <p><strong>velocidade m/s:</strong></p>
+        <input type="number" id="velocidade2">  
+      <input type="button" onclick=resultado2() value="converter"  class="enviar2">
+    </div>
+    <script>
+     var enviar_1 = (document.getElementsByClassName("enviar1"));
+
+var enviar_2 = (document.getElementsByClassName("enviar2"));
+
+
+
+   
+
+  function resultado1(){
+    
+        var velocidadeKm_h = document.getElementById('velocidade1').value;
+    console.log(velocidadeKm_h);  
+
+var operacaoKm_h = velocidadeKm_h/3.6;
+console.log(operacaoKm_h);
+
+var operacaoKm_hFinal = operacaoKm_h.toFixed(2);
+console.log(operacaoKm_hFinal);
+    
+    alert(operacaoKm_hFinal + " " + "m/s");
+    
+    return;
+  } 
+
+
+   function resultado2(){
+     
+     var velocidadeM_s = document.getElementById('velocidade2').value;
+     
+console.log(velocidadeM_s);      
+
+   var operacaoM_s = velocidadeM_s*3.6;
+console.log(operacaoM_s);    
+
+   var operacaoM_sFinal = operacaoM_s.toFixed(2);
+console.log(operacaoM_sFinal);
+     
+     alert(operacaoM_sFinal + " " + "km/h");
+     
+     return;
+   } 
+
+
+    </script>
+  </body>
+</html>
